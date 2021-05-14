@@ -1,11 +1,13 @@
 #! /bin/sh
 
-echo "Path to the code:"
-read path
+echo "Name of script:"
+read script
 
-echo "$path"
-
-filename="$path" | cut -d '/' -f -1
-
-echo $filename
-#rustc $path -o "./binaries/"
+#echo "Path to the code dir"
+#read path
+#
+#echo "Script name"
+#read script
+#
+rustc "$(path)/code/$script"
+#-o "$(path)/binaries/$script"
